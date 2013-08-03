@@ -1,0 +1,11 @@
+*~
+*.swp
+*.pyc
+*.pyo
+*.egg-info
+*.log
+*.patch
+.coverage
+.idea
+dist
+build
