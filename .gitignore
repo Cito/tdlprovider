@@ -3,7 +3,9 @@
 *.pyc
 *.pyo
 *.egg-info
+*.exe
 *.log
+*.lnk
 *.patch
 .coverage
 .idea
