@@ -45,7 +45,9 @@ Add the server in PyCharm under Project Settings - Tasks - Servers as a Generic 
 Screenshot:
 -----------
 
-![ToDoList happily wedded to PyCharm](https://raw.github.com/cito/tdlprovider/master/screenshots/tdlprovider.png "Screenshot")
+ToDoList happily wedded to PyCharm:
+
+![Screenshot](https://raw.github.com/cito/tdlprovider/master/screenshots/tdlprovider.png "Click to enlarge")
 
 
 Copyright and License:
