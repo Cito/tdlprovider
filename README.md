@@ -3,6 +3,7 @@ tdlprovider
 
 Server that can be used as a ToDoList task provider for PyCharm
 
+
 Requirements:
 -------------
 
@@ -10,8 +11,9 @@ Requirements:
 * [PyCharm](http://www.jetbrains.com/pycharm/) (version >= 2.7)
 * [ToDoList](http://www.codeproject.com/Articles/5371/) (version >= 6.7)
 
+
 Usage:
--------
+------
 
 This Python script runs a simple server on a chosen port that can be queried from PyCharm to get the currently active tasks in ToDoList.
 
@@ -39,14 +41,16 @@ Add the server in PyCharm under Project Settings - Tasks - Servers as a Generic 
   * Response Type: XML
   * Task Pattern: `<TASK ID="({id}[^"]*)" TITLE="({summary}[^"]*)" />`
 
+
+Screenshot:
+-----------
+
+![ToDoList happily wedded to PyCharm](https://raw.github.com/cito/tdlprovider/master/screenshots/tdlprovider.png "Screenshot")
+
+
 Copyright and License:
 ----------------------
 
 Copyright (c) 2013 Christoph Zwerschke
 
 This script is released under the Apache v2 License.
-
-Screenshot:
------------
-
-![ToDoList happily wedded to PyCharm](https://raw.github.com/cito/tdlprovider/master/screenshots/tdlprovider.png)

@@ -4,3 +4,5 @@
 *.ini text
 *.py text eol=lf
 *.xml text
+
+*.png binary
