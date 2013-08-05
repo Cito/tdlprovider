@@ -45,3 +45,8 @@ Copyright and License:
 Copyright (c) 2013 Christoph Zwerschke
 
 This script is released under the Apache v2 License.
+
+Screenshot:
+-----------
+
+![ToDoList happily wedded to PyCharm](https://raw.github.com/cito/tdlprovider/master/screenshots/tdlprovider.png)
