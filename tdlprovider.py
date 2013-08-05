@@ -97,6 +97,11 @@ class HTTPHandler(BaseHTTPRequestHandler):
                 else:
                     match = -1
                 if match:
+                    # get task id as integer
+                    try:
+                        int_id = int(task_id)
+                    except (TypeError, ValueError):
+                        int_id = -1
                     # get due date
                     try:
                         due = float(task.get('DUEDATE'))
@@ -108,7 +113,7 @@ class HTTPHandler(BaseHTTPRequestHandler):
                     except (TypeError, ValueError):
                         priority = 1
                     # order by match quality, due date, priority, id
-                    parsed.append((match, due, priority, task_id, title))
+                    parsed.append((match, due, priority, int_id, task_id, title))
                 # collect all sub-tasks
                 self.collect_tasks(task, count, query, parsed)
                 # end if request limit reached
@@ -139,7 +144,7 @@ class HTTPHandler(BaseHTTPRequestHandler):
         tasklist.sort()
         if count:
             tasklist = tasklist[:count]
-        tasklist = [task[3:] for task in tasklist]
+        tasklist = [task[4:] for task in tasklist]
         return tasklist
 
     def do_GET(self):
