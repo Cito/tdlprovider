@@ -190,6 +190,10 @@ def main(path, port):
 
 
 if __name__ == "__main__":
+    if os.path.basename(sys.executable) in (
+            'pythonw.exe', 'tdlprovider.exe'):
+        # run silently when there is no console
+        sys.stdout = sys.stderr = open(os.devnull, 'w')
     path = PATH
     port = PORT
     args = sys.argv[1:]
