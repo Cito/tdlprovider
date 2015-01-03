@@ -21,23 +21,22 @@ as a Generic server and configure it like this:
 
     General:
 
-    Server URL: http://localhost:8089
-      (the port can be configured in the script or via command line)
+    Server URL: http://localhost:PORT
+      (the PORT can be configured in the script or via command line)
     Login Anonymously: Yes
-    User/Password: None
-    User HTTP Authentication: No
 
-    Additional:
+    Server Configuration:
 
-    Login URL: None
-    Task List URL: {serverUrl}/LIST?query={query}&count={count}
+    Task List URL: {serverUrl}/LIST
       (replace LIST with the name of your ToDoList tasklist file;
        the path to the ToDoList tasks lists can be configured
        either in the script or via a command line parameter)
-    Response Type: XML
+    Response Type: XML, with
+    Path settings for tasks: `/TASKLIST/TASK`, id: `@ID`, summary: `@TITLE`
+    or, Response Type: Text, with
     Task Pattern: <TASK ID="({id}[^"]*)" TITLE="({summary}[^"]*)" />
 
-Copyright (c) 2013 Christoph Zwerschke
+Copyright (c) 2013-2015 Christoph Zwerschke
 
 This script is released under the Apache v2 License.
 
